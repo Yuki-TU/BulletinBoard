@@ -1,0 +1,11 @@
+version: "3"
+services:
+  react:
+    build:
+      context: .
+    tty: true
+    volumes:
+      - ./app/:/usr/src/app/
+      - /usr/src/app/bulletinboard/node_modules
+    ports:
+      - 3000:3000
